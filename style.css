@@ -14,7 +14,7 @@ body {
 /* Hero Section */
 .hero-wrapper {
   height: 100vh;
-  overflow: hidden; /* Prevent overflow */
+  overflow: auto; /* Prevent overflow */
   position: relative;
   perspective: 1px; /* Enable 3D perspective */
 }
@@ -120,6 +120,54 @@ body {
 .product-images img:hover {
   transform: scale(1.05); /* Slight hover scale effect */
 }
+
+#products {
+  text-align: center;
+  padding: 20px; /* Increased padding for better spacing */
+  background-color: #f8f8f8; /* Light background for contrast */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Spacing between grid items */
+}
+
+h2 {
+  font-size: 2.5em; /* Larger heading */
+  margin-bottom: 20px;
+  color: #333; /* Dark color for better readability */
+}
+
+.product {
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.product:hover {
+  transform: translateY(-5px); /* Slightly lift the product on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+h3 {
+  font-size: 1.5em; /* Heading for product name */
+  color: #27ae60; /* Green color for product names */
+  margin: 10px 0; /* Spacing around product name */
+}
+
+p {
+  font-size: 1em; /* Standard font size for descriptions */
+  color: #555; /* Slightly lighter color for descriptions */
+}
+
+
+
+
 
 /* Features Section */
 .features {
@@ -256,6 +304,114 @@ body {
     background-color: #ffffff; /* White background for answers */
     color: #555; /* Slightly darker text for answers */
     border-radius: 0 0 8px 8px; /* Rounded bottom edges */
+}
+
+/* Carousel Container */
+.carousel {
+  position: relative;
+  width: 100%; /* Full width of the container */
+  max-width: 500px; /* Max width for a single card */
+  margin: 0 auto; /* Center the carousel */
+  overflow: hidden; /* Hide overflow to show only one card */
+}
+
+/* Inner Container */
+.carousel-inner {
+  display: flex; /* Use flexbox for horizontal layout */
+  transition: transform 0.5s ease; /* Smooth transition effect */
+}
+
+/* Carousel Item */
+.carousel-item {
+  flex: 0 0 100%; /* Each item takes full width of the carousel */
+  box-sizing: border-box; /* Include padding in width */
+  text-align: center; /* Center content */
+  padding: 20px; /* Padding for better spacing */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  background: #f9f9f9; /* Light grey background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s; /* Smooth scale effect */
+}
+
+/* Image Styling */
+.carousel-item img {
+  max-width: 80%; /* Limit image width to 80% of the container */
+  max-height: 200px; /* Set a maximum height for the images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  display: block; /* Ensure block display */
+  margin: 0 auto; /* Center image */
+}
+
+/* Title Styling */
+h3 {
+  font-size: 1.5em; /* Increase font size */
+  color: #333; /* Dark text color */
+  margin: 10px 0; /* Margin around title */
+}
+
+/* Price Styling */
+.price {
+  font-weight: bold;
+  font-size: 1.2em; /* Larger font for price */
+  color: #e74c3c; /* Price color */
+  margin: 5px 0; /* Margin for spacing */
+}
+
+/* Buy Now Button */
+.buy-now {
+  background-color: #27ae60; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1em; /* Font size */
+  transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+  width: 100%; /* Full width button */
+}
+
+/* Button Hover Effect */
+.buy-now:hover {
+  background-color: #219150; /* Darker green */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  background-color: rgba(255, 255, 255, 0.7); /* Light background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  padding: 10px;
+  font-size: 1.5em; /* Font size for arrows */
+  z-index: 10; /* On top of carousel */
+  border-radius: 50%; /* Circular buttons */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Positioning Navigation Buttons */
+.prev {
+  left: 10px; /* Left button */
+}
+
+.next {
+  right: 10px; /* Right button */
+}
+
+/* Navigation Button Hover Effect */
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 1); /* Darker on hover */
+}
+
+/* Ensure appropriate layout on mobile */
+@media (max-width: 768px) {
+    .carousel-item {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
 }
 
 
