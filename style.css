@@ -20,6 +20,9 @@ body {
 }
 
 .hero {
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   height: 100vh;
   background-image: url('assets/3.jpg');
   background-size: cover;
@@ -63,6 +66,7 @@ body {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .cta-button {
@@ -213,6 +217,48 @@ body {
 .testimonial:hover {
   transform: scale(1.02); /* Slight hover scale effect */
 }
+
+.faq {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+.faq h2 {
+    margin-bottom: 30px;
+    color: #333; /* Darker color for headings */
+}
+
+.faq-item {
+    margin: 10px 0;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures rounded corners are effective */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.faq-question {
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    padding: 15px;
+    background: #4CAF50; /* Green background for questions */
+    color: white; /* White text for contrast */
+    font-size: 18px; /* Slightly larger font size */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.faq-question:hover {
+    background: #45a049; /* Darker green on hover */
+}
+
+.faq-answer {
+    display: none; /* Hidden by default */
+    padding: 15px;
+    border-top: 1px solid #ddd; /* Divider between question and answer */
+    background-color: #ffffff; /* White background for answers */
+    color: #555; /* Slightly darker text for answers */
+    border-radius: 0 0 8px 8px; /* Rounded bottom edges */
+}
+
+
 
 /* Footer CTA */
 .footer-cta {

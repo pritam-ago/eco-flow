@@ -81,11 +81,64 @@
         </div>
     </section>
 
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3 class="faq-question">What materials are EcoFlow bottles made from?</h3>
+            <div class="faq-answer">
+                <p>EcoFlow bottles are made from 100% recyclable materials that are safe for you and the environment.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">How do I clean my EcoFlow bottle?</h3>
+            <div class="faq-answer">
+                <p>You can clean your EcoFlow bottle with warm soapy water or place it in the dishwasher (top rack only).</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Are EcoFlow bottles insulated?</h3>
+            <div class="faq-answer">
+                <p>Yes, EcoFlow bottles are insulated to keep your drinks cold or hot for hours.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Can I return my EcoFlow bottle?</h3>
+            <div class="faq-answer">
+                <p>Yes, we offer a 30-day return policy for any unused and undamaged bottles.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
     <!-- Footer CTA -->
     <section class="footer-cta">
         <h2>Join the Movement</h2>
         <a href="#" class="cta-button">Get Your Eco Bottle</a>
     </section>
+
+
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Enables smooth scrolling
+            });
+        }
+
+        document.querySelector('.cta-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            scrollToTop(); // Call the scroll function
+        });
+
+        document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block'; // Toggle display
+    });
+});
+    </script>
 
 </body>
 </html>
